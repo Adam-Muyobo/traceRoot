@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traceRoot Blockchain</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="traceRoot Logo" class="logo">
+    
+    <div class="container">
+        <h1>traceRoot Blockchain</h1>
+
+        <!-- Form for adding new transactions -->
+        <form action="/add_transaction" method="POST">
+            <input type="text" name="data" placeholder="Enter transaction details" required>
+            <button type="submit">Add Transaction</button>
+        </form>
+
+        <h2>Blockchain:</h2>
+        <ul>
+            {% for block, qr_code in zip(chain, qr_codes) %}
+                <li>
+                    <strong>Block {{ block['index'] }}</strong><br>
+                    Timestamp: {{ block['timestamp'] }}<br>
+                    Data: {{ block['data'] }}<br>
+                    Hash: {{ block['hash'] }}<br>
+                    Previous Hash: {{ block['previous_hash'] }}<br>
+                    <img src="{{ url_for('static', filename=qr_code) }}" alt="QR Code for Block {{ block['index'] }}">
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 traceRoot. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
