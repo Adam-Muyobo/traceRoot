@@ -21,7 +21,7 @@
         <h2>Blockchain:</h2>
         <ul>
             {% for block, qr_code in zip(chain, qr_codes) %}
-                <li>
+                <li class="{{ 'valid' if blockchain.is_chain_valid() else 'invalid' }}">
                     <strong>Block {{ block['index'] }}</strong><br>
                     Timestamp: {{ block['timestamp'] }}<br>
                     Data: {{ block['data'] }}<br>
