@@ -1,7 +1,6 @@
 # traceRoot
 
-![traceRoot Logo](![logo](https://github.com/user-attachments/assets/863c34a2-04e0-48c7-8a5e-e7c092612280)
-) 
+![logo](https://github.com/user-attachments/assets/ec022c81-ed0b-4a52-baa7-405e9946333c)
 
 ## System Overview
 
