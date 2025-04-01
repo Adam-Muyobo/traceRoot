@@ -38,7 +38,7 @@ traceRoot is a blockchain-based system for supply chain transparency. Each produ
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/traceroot.git
+    git clone https://github.com/Adam-Muyobo/traceroot.git
     cd traceroot
     ```
 2. Install dependencies:
